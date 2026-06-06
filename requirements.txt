@@ -1,0 +1,6 @@
+# No external ML libraries needed — pure Python + stdlib only
+# This keeps the 5-minute CPU constraint comfortably met
+
+# Optional: only needed if you want to run the Jupyter demo notebook
+# pandas>=2.0.0
+# jupyter>=1.0.0

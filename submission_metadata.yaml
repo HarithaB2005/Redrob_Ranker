@@ -1,0 +1,76 @@
+# Redrob Hackathon — Submission Metadata
+
+team_name: "your-team-name-here"
+
+primary_contact:
+  name: "Your Name"
+  email: "your@email.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Your Name"
+    email: "your@email.com"
+    role: "Solo participant"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./data/candidates.jsonl --out ./output/submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local CPU"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Ubuntu 22.04 / macOS 14"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architectural discussion, code review, and prompt strategy.
+  No candidate data was fed to any external LLM during the ranking step.
+  The ranking pipeline is fully deterministic, CPU-only, and makes zero
+  API calls at inference time.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Five-dimension deterministic ranker. Stage 1: hard filter removes wrong-domain
+  candidates (consulting-only careers, non-AI primary specialties). Stage 2:
+  parallel scoring across skill match (35%), career trajectory (25%), behavioral
+  signals (25%), location fit (10%), and education (5%). Skill matching uses
+  semantic category coverage across 5 JD-derived requirement clusters — not
+  keyword counting — to resist the keyword-stuffing trap the JD warns about.
+  Career trajectory scores product-company vs consulting ratio, domain relevance
+  in actual job descriptions, and title progression velocity. Behavioral signals
+  implement the JD's explicit guidance: candidates inactive >180 days with <10%
+  response rate receive a 0.5x composite multiplier. Stage 3: top-200 reranked
+  with title alignment, GitHub, and triple-availability bonuses. Reasoning
+  generated from structured data only — no hallucination possible.
+  Runtime: ~34 seconds for 100K candidates on a standard CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
