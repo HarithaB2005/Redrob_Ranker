@@ -1,13 +1,15 @@
 # Redrob Hackathon — Submission Metadata
 
-team_name: "your-team-name-here"
+team_name: "Team Redrob"
 
 primary_contact:
-  name: "Your Name"
-  email: "your@email.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Bezawada Haritha"
+  email: "bezawadaharitha05@gmail.com"
+  phone: "+91-7842831743"
+# SOLO PARTICIPANT
 
 team_members:
+#NONE
   - name: "Your Name"
     email: "your@email.com"
     role: "Solo participant"
@@ -15,9 +17,9 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+github_repo: "https://github.com/HarithaB2005/Redrob_Ranker"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/BHaritha/Redrob-Ranker"
 
 reproduce_command: "python rank.py --candidates ./data/candidates.jsonl --out ./output/submission.csv"
 
