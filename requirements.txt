@@ -1,5 +1,9 @@
-# No external ML libraries needed — pure Python + stdlib only
-# This keeps the 5-minute CPU constraint comfortably met
+# Runtime UI for the Hugging Face Space.
+gradio==4.14.0
+
+# Gradio 4.14 imports HfFolder, which was removed from newer
+# huggingface_hub releases.
+huggingface_hub<1.0.0
 
 # Optional: only needed if you want to run the Jupyter demo notebook
 # pandas>=2.0.0
