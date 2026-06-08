@@ -9,5 +9,5 @@ app_file: app.py
 pinned: false
 ---
 
-# Redrob Ranker
-This is my candidate ranking application synced via GitHub Actions.
+# Redrob Ranker Application
+Automated deployment space synced through GitHub Actions.
