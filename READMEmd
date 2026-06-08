@@ -1,0 +1,13 @@
+---
+title: Redrob Ranker
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 4.14.0
+app_file: app.py
+pinned: false
+---
+
+# Redrob Ranker
+This is my candidate ranking application synced via GitHub Actions.
